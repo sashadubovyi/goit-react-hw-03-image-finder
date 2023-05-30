@@ -5,14 +5,14 @@ export const SearchInput = styled.input`
   height: 30px;
   border: 2px solid transparent;
   outline: none;
-  border-bottom: 2px solid #3f3f3f;
+  border-bottom: 2px solid #fa475391;
   caret-color: #3f3f3f;
-  color: #fa4753;
   background-color: #212121;
   padding: 5px;
   transition: 0.5s linear;
   font-family: monospace;
   letter-spacing: 1px;
+  color: #fa4753;
 
   &:focus {
     caret-color: #fa4753;

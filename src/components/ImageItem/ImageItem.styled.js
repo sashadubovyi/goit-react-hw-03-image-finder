@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const ImageBox = styled.li`
   width: 30%;
   opacity: 0.7;
+  transition: 0.4s linear;
+  animation: shadow-drop-center 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 
   &:hover {
     box-shadow: 4px 4px 10px #070707;

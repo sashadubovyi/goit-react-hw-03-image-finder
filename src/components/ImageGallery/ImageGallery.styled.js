@@ -30,3 +30,10 @@ export const MoreBtn = styled.button`
     border: 4px solid #fa4753;
   }
 `;
+
+export const Error = styled.h1`
+  transition: 0.5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  color: #fa4753;
+`;

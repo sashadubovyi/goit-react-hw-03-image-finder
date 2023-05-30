@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Modal from '../Modal/Modal';
 import { getSearchImagesApi } from '../../services/imageAPI';
-import { ImageList, MoreBtn } from './ImageGallery.styled';
+import { Error, ImageList, MoreBtn } from './ImageGallery.styled';
 import ImageItem from 'components/ImageItem/ImageItem';
 import Loader from 'components/Loader/Loader';
 
@@ -73,7 +73,7 @@ class ImageGallery extends Component {
       <>
         {isLoading && <Loader />}
         {error ? (
-          <h1>{error}</h1>
+          <Error>{error}</Error>
         ) : (
           <ImageList>
             {image.map(hit => (
