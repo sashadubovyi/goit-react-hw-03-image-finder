@@ -14,6 +14,5 @@ export const getSearchImagesApi = async (query, page = 1) => {
       orientation: 'horizontal',
     },
   });
-  console.log(response.data);
   return response.data;
 };
