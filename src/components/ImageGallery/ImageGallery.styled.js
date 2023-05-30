@@ -16,7 +16,6 @@ export const MoreBtn = styled.button`
   cursor: pointer;
   margin-left: 20px;
   height: 30px;
-  width: 70px;
   background-color: #212121;
   font-family: monospace;
   letter-spacing: 1px;
@@ -27,7 +26,8 @@ export const MoreBtn = styled.button`
   border: 2px solid #fa4753;
 
   &:hover {
-    border: 4px solid #fa4753;
+    border-top: 5px solid #fa4753;
+    border-bottom: 5px solid #fa4753;
   }
 `;
 

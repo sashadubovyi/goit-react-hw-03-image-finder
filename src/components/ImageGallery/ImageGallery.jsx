@@ -71,7 +71,6 @@ class ImageGallery extends Component {
     const { image, isLoading, error, totalResults, modalData } = this.state;
     return (
       <>
-        {isLoading && <Loader />}
         {error ? (
           <Error>{error}</Error>
         ) : (
@@ -85,9 +84,10 @@ class ImageGallery extends Component {
             ))}
           </ImageList>
         )}
+        {isLoading && <Loader />}
         {totalResults > image.length && (
           <MoreBtn type="button" onClick={this.changePage}>
-            More
+            Loade more images
           </MoreBtn>
         )}
         {modalData && (
