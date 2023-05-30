@@ -1,23 +1,25 @@
+import { Component } from 'react';
 import { Main } from './App.styled';
+import SearchForm from './SearchForm/SearchForm';
+import ImageGallery from './ImageGallery/ImageGallery';
 
-export const App = () => {
-  return (
-    <Main>
-      <form>
-        <input
-          type="text"
-          id="search-input"
-          name="query"
-          plaseholder="Enter tag for search images..."
-        />
-      </form>
-      <ul className="gallery">
-        <li className="gallery-item"></li>
-        <li></li>
-        <li></li>
-      </ul>
-      <button>Load more</button>
-      <modal></modal>
-    </Main>
-  );
-};
+class App extends Component {
+  state = {
+    search: '',
+  };
+
+  handleSearch = search => {
+    this.setState({ search });
+  };
+
+  render() {
+    return (
+      <Main>
+        <SearchForm handleSearch={this.handleSearch} />
+        <ImageGallery search={this.state.search} />
+      </Main>
+    );
+  }
+}
+
+export default App;
