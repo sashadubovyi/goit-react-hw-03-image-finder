@@ -2,10 +2,12 @@ import styled from 'styled-components';
 
 export const ImageBox = styled.li`
   width: 30%;
+  opacity: 0.7;
 
   &:hover {
     box-shadow: 4px 4px 10px #070707;
     outline: 2px solid #fa4753;
+    opacity: 1;
     cursor: zoom-in;
   }
 `;
