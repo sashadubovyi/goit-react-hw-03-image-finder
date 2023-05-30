@@ -87,7 +87,7 @@ class ImageGallery extends Component {
         {isLoading && <Loader />}
         {totalResults > image.length && (
           <MoreBtn type="button" onClick={this.changePage}>
-            Loade more images
+            Load more images
           </MoreBtn>
         )}
         {modalData && (
