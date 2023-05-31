@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { Backdrop, LargeImage } from './Modal.styled';
+import PropTypes from 'prop-types';
 
 class Modal extends Component {
   handleBackdropClick = e => {
@@ -29,5 +30,13 @@ class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  closeModal: PropTypes.func.isRequired,
+  modalData: PropTypes.shape({
+    url: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }),
+};
 
 export default Modal;

@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import { SearchBtn, SearchInput } from './SearchForm.styled';
+import PropTypes from 'prop-types';
 
 class SearchForm extends Component {
   state = {
@@ -29,5 +30,11 @@ class SearchForm extends Component {
     );
   }
 }
+
+SearchForm.propTypes = {
+  state: PropTypes.shape({
+    input: PropTypes.string.isRequired,
+  }),
+};
 
 export default SearchForm;

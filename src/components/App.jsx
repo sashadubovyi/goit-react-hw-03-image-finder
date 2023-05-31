@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Main } from './App.styled';
 import SearchForm from './SearchForm/SearchForm';
 import ImageGallery from './ImageGallery/ImageGallery';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {
@@ -21,5 +22,11 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  state: PropTypes.shape({
+    search: PropTypes.string.isRequired,
+  }),
+};
 
 export default App;
