@@ -4,7 +4,6 @@ import { getSearchImagesApi } from '../../services/imageAPI';
 import { Error, ImageList, MoreBtn } from './ImageGallery.styled';
 import ImageItem from 'components/ImageItem/ImageItem';
 import Loader from 'components/Loader/Loader';
-import PropTypes from 'prop-types';
 
 class ImageGallery extends Component {
   state = {
@@ -70,6 +69,7 @@ class ImageGallery extends Component {
 
   render() {
     const { image, isLoading, error, totalResults, modalData } = this.state;
+    console.log(totalResults);
     return (
       <>
         {error ? (
@@ -98,11 +98,5 @@ class ImageGallery extends Component {
     );
   }
 }
-
-ImageGallery.propTypes = {
-  hit: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-  }),
-};
 
 export default ImageGallery;
